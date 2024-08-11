@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Crypto Wallet Login</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/bootstrap-grid.min.css" rel="stylesheet" />
+        <link href="css/bootstrap-reboot.min.css" rel="stylesheet" />
+        <link href="css/dashboard.css" rel="stylesheet" />
+        <link href="css/signin.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="text-center">
+        <form class="form-signin" id="login-form">
+            <img class="mb-4" src="moralis.png" alt="" width="72" height="72" />
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for="username" class="sr-only">Username</label>
+            <input
+                type="text"
+                id="username"
+                class="form-control"
+                placeholder="Username"
+                required
+                autofocus
+            />
+            <label for="password" class="sr-only">Password</label>
+            <input
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="Password"
+                required
+            />
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                Sign in
+            </button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+        </form>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script>
+            document
+                .getElementById("login-form")
+                .addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent the form from submitting
+
+                    // Predefined valid credentials
+                    const validCredentials = [
+                        { username: "user1", password: "password1" },
+                        { username: "IvanP", password: "Crypto401k" },
+                    ];
+
+                    // Get the values from the form
+                    const username = document.getElementById("username").value;
+                    const password = document.getElementById("password").value;
+
+                    // Check if the entered credentials match any valid pair
+                    const isValid = validCredentials.some(
+                        (cred) =>
+                            cred.username === username &&
+                            cred.password === password,
+                    );
+
+                    if (isValid) {
+                        // Redirect to dashboard if credentials are valid
+                        window.location.href = "dashboard.html";
+                    } else {
+                        // Show an alert if credentials are invalid
+                        alert("Invalid username or password.");
+                    }
+                });
+        </script>
+    </body>
+</html>

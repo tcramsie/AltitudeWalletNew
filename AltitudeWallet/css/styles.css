@@ -1,0 +1,80 @@
+/* styles.css */
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.wallet-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.wallet-header {
+    border-bottom: 2px solid #4caf50;
+}
+
+.wallet-content {
+    padding: 25px;
+}
+
+.wallet-address,
+.private-key,
+.total-value {
+    font-size: 18px;
+    color: #555;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coin {
+    transition: background-color 0.3s ease;
+}
+
+.coin:hover {
+    background-color: #e8f5e9;
+}
+
+.coin-name {
+    font-size: 20px;
+    color: #333;
+}
+
+.coin-balance {
+    font-size: 18px;
+    color: #333;
+}
+
+.coin-price {
+    font-size: 16px;
+    color: #888;
+}
+
+.total-value {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #4caf50;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.total-value:hover {
+    background-color: #4caf50;
+    color: white;
+}
