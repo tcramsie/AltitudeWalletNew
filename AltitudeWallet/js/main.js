@@ -12,7 +12,7 @@ const coins = [
   { name: "Pika", balance: 192307.69, symbol: "Pika", id: "pika-coin-id" },
   { name: "Bdag", balance: 102739.35, symbol: "Bdag", id: "bdag-coin-id" },
   { name: "ADA", balance: 793.0, symbol: "ADA", id: "cardano" },
-  { name: "$PEPU", balance: 31250.0, symbol: "PEPU", id: "pepu-coin-id" },
+  { name: "$PEPU", balance: 31250.0, symbol: "$PEPU", id: "pepu-coin-id" },
   { name: "Argy Bargy", balance: 214285.71, symbol: "Argy", id: "argy" }, // Updated to use "Argy" as the coin ID and symbol
 ];
 
@@ -23,7 +23,7 @@ const customPrices = {
   "pika-coin-id": 0.0000000003066,
   "bdag-coin-id": 0.019,
   "pepu-coin-id": 0.008032,
-  argy: 0.001, // Price for Argy Bargy
+  argy: 0.0007, // Price for Argy Bargy
 };
 
 document.getElementById("wallet-address").innerText = walletAddress;
@@ -141,7 +141,7 @@ const coins = [
   { name: "Bdag", balance: 102739.35, symbol: "Bdag", id: "bdag-coin-id" },
   { name: "ADA", balance: 793.0, symbol: "ADA", id: "cardano" },
   { name: "$PEPU", balance: 31250.0, symbol: "$PEPU", id: "pepu-coin-id" },
-  { name: "Argy", balance: 214285.71, symbol: "Argy", id: "argy" }, // Updated to use "Argy" as the coin ID and symbol
+  { name: "Argy Bargy", balance: 214285.71, symbol: "Argy", id: "argy" }, // Updated to use "Argy" as the coin ID and symbol
 ];
 
 // Custom prices for coins not available on CoinGecko
